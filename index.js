@@ -1,7 +1,12 @@
 const Button = (props) => {
   //  Write your code here.
-  const { name, className } = props;
-  return <button className={'button ${className}'>{name}</button>;
+  const { text, className } = props;
+
+  return (
+      <div className = "buttons-container">
+  <button className={'button ${className}'>{text}</button>
+  </div>
+  );
 };
 
 const element = (
@@ -9,9 +14,9 @@ const element = (
   <div className="social-buttons-container">
     <h1 className="container-heading">Social Buttons</h1>
     <div className="buttons-container">
-      <Button name="Like" className="like" />
-      <Button name="Comment" className="comment" />
-      <Button name="Share" className="share" />
+      <Button text="Like" className="like" />
+      <Button text="Comment" className="comment" />
+      <Button text="Share" className="share" />
     </div>
   </div>
 );
